@@ -13,11 +13,11 @@ class MockAppController: App {
         return MockHomeManager()
     }
     
-    func getUserManager() -> UserManagerSpec {
+    func getUserManager() -> UserManaging {
         return MockUserManager()
     }
     
-    func getNavigator() -> Nav {
+    func getNavigator() -> Navigation {
         return MockNavigator(controller: self)
     }
 }

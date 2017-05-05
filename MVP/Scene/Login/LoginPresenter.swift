@@ -12,12 +12,12 @@ protocol LoginPresenting {
 
 class LoginPresenter: LoginPresenting {
     
-    let navigator:   Nav!
+    let navigator:   Navigation!
     let homeManager: HomeManager!
     weak var loginView: LoginView?
     
     
-    init(with manager: HomeManager, navigator: Nav) {
+    init(with manager: HomeManager, navigator: Navigation) {
         self.homeManager = manager
         self.navigator = navigator
     }

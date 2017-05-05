@@ -7,9 +7,9 @@ import Foundation
 import UIKit
 @testable import MVP
 
-class MockNavigator: Nav {
+class MockNavigator: Navigation {
     
-    var lastPage: Page!
+    var lastPage: Scene!
     
     let controller: App
     
@@ -17,12 +17,12 @@ class MockNavigator: Nav {
         self.controller = controller
     }
     
-    func open(page: Page, from viewController: AnyObject?) {
+    func open(page: Scene, from viewController: AnyObject?) {
         lastPage = page
     }
     
     //helper func to reduce repeated calls in tests
-    func verify(page: Page) {
+    func verify(page: Scene) {
         //TODO
     }
     

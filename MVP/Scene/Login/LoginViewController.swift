@@ -8,11 +8,10 @@ import UIKit
 
 
 protocol LoginView: class {
-    func display(cards: [String])
     func showError(error: NSError)
 }
 
-class LoginViewController : ViewController, LoginView {
+class LoginViewController: ViewController, LoginView {
     
     let presenter: LoginPresenting!
     
@@ -21,16 +20,13 @@ class LoginViewController : ViewController, LoginView {
         super.init()
     }
     
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("Not implemented")
     }
     
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-    
-    }
-    
-    func display(cards: [String]) {
+        
     }
     
     func showError(error: NSError) {

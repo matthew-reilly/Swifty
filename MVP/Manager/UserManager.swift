@@ -5,16 +5,15 @@
 
 import Foundation
 
-protocol UserManagerSpec {
+protocol UserManaging {
     func getUser() -> User?
 }
 
-class UserManager: UserManagerSpec {
+class UserManager: UserManaging {
     func getUser() -> User? {
         return nil
     }
 }
-
 
 struct User {
 

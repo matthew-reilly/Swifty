@@ -8,7 +8,7 @@ import Alamofire
 @testable import MVP
 
 
-class MockUserManager: UserManagerSpec {
+class MockUserManager: UserManaging {
     
     func getUser() -> User? {
         return nil

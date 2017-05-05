@@ -11,24 +11,24 @@ protocol App {
     
     func getHomeManager() -> HomeManager
     
-    func getUserManager() -> UserManagerSpec
+    func getUserManager() -> UserManaging
     
-    func getNavigator() -> Nav
+    func getNavigator() -> Navigation
     
 }
 
-class NewAppController: App {
+class AppController: App {
     
     func getHomeManager() -> HomeManager {
         //satisfy needed dependencies
         return HomeManagerImpl(with: getUserManager())
     }
     
-    func getUserManager() -> UserManagerSpec {
+    func getUserManager() -> UserManaging {
         return UserManager()
     }
     
-    func getNavigator() -> Nav {
+    func getNavigator() -> Navigation {
         return Navigator(controller: self)
     }
     

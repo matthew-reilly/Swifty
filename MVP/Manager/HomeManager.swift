@@ -15,9 +15,9 @@ typealias HomeResult = Result<[String], NSError>
 
 class HomeManagerImpl: HomeManager {
     
-    let userManager: UserManagerSpec
+    let userManager: UserManaging
     
-    init(with userManager: UserManagerSpec) {
+    init(with userManager: UserManaging) {
         self.userManager = userManager
     }
     

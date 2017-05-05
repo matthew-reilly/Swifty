@@ -8,13 +8,13 @@ import Foundation
 
 class MockHomePresenter: HomePresenting {
     
-    let navigator:   Nav!
+    let navigator:   Navigation!
     let homeManager: HomeManager!
     weak var homeView: HomeView?
     
     var lastCall: String!
     
-    init(with manager: HomeManager, navigator: Nav) {
+    init(with manager: HomeManager, navigator: Navigation) {
         self.homeManager = manager
         self.navigator = navigator
     }

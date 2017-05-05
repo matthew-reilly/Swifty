@@ -12,7 +12,7 @@ protocol HomeView: class {
     func showError(error: NSError)
 }
 
-class HomeViewController : ViewController, HomeView {
+class HomeViewController: ViewController, HomeView {
     
     let presenter: HomePresenting!
     let dataSource = DataSource()
@@ -24,11 +24,11 @@ class HomeViewController : ViewController, HomeView {
         super.init()
     }
     
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("Not implemented")
     }
     
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         presenter.getCards(query)
@@ -44,14 +44,14 @@ class HomeViewController : ViewController, HomeView {
 }
 
 class DataSource: NSObject, UICollectionViewDataSource {
-
+    
     var cards = [String]()
     
-    public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cards.count
     }
     
-    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         return UICollectionViewCell()
     }
     
