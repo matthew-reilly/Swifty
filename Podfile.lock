@@ -1,0 +1,60 @@
+PODS:
+  - Alamofire (3.4.2)
+  - Locksmith (2.0.8)
+  - Money (1.7.0):
+    - ValueCoding
+  - Nimble (3.2.0)
+  - ObjectMapper (1.5.0)
+  - Quick (0.8.0)
+  - SnapKit (0.18.0)
+  - ValueCoding (1.5.0)
+  - WWAppearance (2.0.0):
+    - SnapKit
+  - WWRequestKit (0.0.4):
+    - WWRequestKit/Root (= 0.0.4)
+  - WWRequestKit/Root (0.0.4):
+    - Alamofire (~> 3.4)
+    - Locksmith (~> 2.0.8)
+    - Money (~> 1.7.0)
+    - ObjectMapper (~> 1.3)
+    - ValueCoding (~> 1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4.0)
+  - Nimble (~> 3.2.0)
+  - Quick (~> 0.8.0)
+  - SnapKit (= 0.18.0)
+  - WWAppearance (from `git@github.com:weddingwire/appearance-ios.git`, branch `dev`)
+  - WWRequestKit (from `git@github.com:weddingwire/WWRequestKit.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  WWAppearance:
+    :branch: dev
+    :git: git@github.com:weddingwire/appearance-ios.git
+  WWRequestKit:
+    :branch: master
+    :git: git@github.com:weddingwire/WWRequestKit.git
+
+CHECKOUT OPTIONS:
+  WWAppearance:
+    :commit: db58e732975a27cf4e98963dae60214a5625c02c
+    :git: git@github.com:weddingwire/appearance-ios.git
+  WWRequestKit:
+    :commit: 28539cd162ef9d6bb530f1bc11f3ab117e2be158
+    :git: git@github.com:weddingwire/WWRequestKit.git
+
+SPEC CHECKSUMS:
+  Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
+  Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
+  Money: f46c3c8fcaf7afa35f2ee3edaeba58335fd5b669
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  ObjectMapper: 386645adca9d9d23b95eda43090b09d66444cf14
+  Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
+  SnapKit: e1f090a6d47b1dd4bd89b73f72b6746a7835ef3c
+  ValueCoding: c88871a90100fc1b1e982dba95a503a4ca997175
+  WWAppearance: e2ea8327101e6266ad848662133afe22ecd48f0a
+  WWRequestKit: 97cfdc184a71d309ef4bbd543cbf06de1fde5703
+
+PODFILE CHECKSUM: 361029bd6b9e0c8650b6bcb32a4cbd0e157b948b
+
+COCOAPODS: 1.2.1
