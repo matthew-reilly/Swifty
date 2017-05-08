@@ -5,31 +5,28 @@
 
 import Foundation
 
-
-
 protocol App {
     
-    func getHomeManager() -> HomeManager
+    var homeManager: HomeManager { get }
     
-    func getUserManager() -> UserManaging
+    var userManager: UserManaging { get }
     
-    func getNavigator() -> Navigation
+    var navigator: Navigation { get }
     
 }
 
 class AppController: App {
     
-    func getHomeManager() -> HomeManager {
-        //satisfy needed dependencies
-        return HomeManagerImpl(with: getUserManager())
-    }
+    lazy var homeManager: HomeManager = {
+        return HomeManagerImpl(with: self.userManager)
+    }()
     
-    func getUserManager() -> UserManaging {
+    lazy var userManager: UserManaging = {
         return UserManager()
-    }
+    }()
     
-    func getNavigator() -> Navigation {
+    lazy var navigator: Navigation = {
         return Navigator(controller: self)
-    }
+    }()
     
 }

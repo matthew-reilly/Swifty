@@ -8,16 +8,10 @@ import Foundation
 
 class MockAppController: App {
     
-    func getHomeManager() -> HomeManager {
-        //satisfy needed dependencies
-        return MockHomeManager()
-    }
+    lazy var homeManager: HomeManager  = MockHomeManager()
     
-    func getUserManager() -> UserManaging {
-        return MockUserManager()
-    }
+    lazy var userManager: UserManaging = MockUserManager()
     
-    func getNavigator() -> Navigation {
-        return MockNavigator(controller: self)
-    }
+    lazy var navigator:   Navigation   = MockNavigator(controller: self)
+    
 }

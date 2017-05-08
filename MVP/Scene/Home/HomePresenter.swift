@@ -16,9 +16,10 @@ protocol HomePresenting {
 
 class HomePresenter: HomePresenting {
     
+    weak var homeView: HomeView?
+    
     let navigator:   Navigation!
     let homeManager: HomeManager!
-    weak var homeView: HomeView?
     
     
     init(with manager: HomeManager, navigator: Navigation) {
@@ -49,7 +50,7 @@ class HomePresenter: HomePresenting {
     }
     
     func cardClicked(index: Int) {
-        navigator.open(.Detail(index: index), from: homeView) //need better way
+        navigator.open(.Detail(index: index), from: homeView)
     }
     
 }

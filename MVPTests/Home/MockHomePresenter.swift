@@ -28,7 +28,7 @@ class MockHomePresenter: HomePresenting {
     }
     
     func cardClicked(index: Int) {
-    }
     
+    }
     
 }

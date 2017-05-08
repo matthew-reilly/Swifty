@@ -28,12 +28,12 @@ extension Scene {
     func open(from viewController: UIViewController, animated: Bool = true, controller: App) -> Bool {
         switch self {
         case .Home(let query):
-            let presenter = HomePresenter(with: controller.getHomeManager(), navigator: controller.getNavigator())
+            let presenter = HomePresenter(with: controller.homeManager, navigator: controller.navigator)
             let vc        = HomeViewController(with: presenter)
             presenter.setView(vc)
             viewController.navigationController?.pushViewController(vc, animated: animated)
         case .Login:
-            let presenter = LoginPresenter(with: controller.getHomeManager(), navigator: controller.getNavigator())
+            let presenter = LoginPresenter(with: controller.homeManager, navigator: controller.navigator)
             let detail = LoginViewController(with: presenter)
             viewController.presentViewController(detail, animated: animated, completion: nil)
         case .Detail(let index):
